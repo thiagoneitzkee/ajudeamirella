@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ajude a Mirella — Arrecadação</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Ajude a Mirella</h1>
+      <p class="subtitle">Arrecadação para tratamentos, equipamentos e exames necessários</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="gallery" class="card">
+      <h2>Fotos da Mirella</h2>
+      <div class="gallery">
+        <img src="images/mirella-1.jpg" alt="Mirella foto 1" />
+        <img src="images/mirella-2.jpg" alt="Mirella foto 2" />
+        <img src="images/mirella-3.jpg" alt="Mirella foto 3" />
+        <img src="images/mirella-4.jpg" alt="Mirella foto 4" />
+      </div>
+    </section>
+
+    <section id="story" class="card">
+      <h2>Sobre a Mirella</h2>
+      <p>Oi, meu nome é Larissa e essa é a Mirella. Mirella tem dois anos e tem paralisia cerebral e uma doença genética rara. Pra quem não sabe, a Mirella teve uma hemorragia no cérebro antes mesmo dela nascer com 22 semanas de gestação.</p>
+
+      <p>Recentemente descobrimos que ela tem uma doença genética que causou essa hemorragia no cérebro. Devido a essa hemorragia grave, que atingiu praticamente todo o cérebro, ela tem paralisia cerebral, atraso grave no desenvolvimento e inúmeras sequelas.</p>
+
+      <p>Atualmente a Mirella precisa de diversos especialistas, equipamentos, exames e terapias. Algumas coisas conseguimos pelo SUS e outras via medidas judiciais, mas ainda faltam muitos itens — especialmente após a descoberta dessa doença genética, que provoca fragilidade dos vasos sanguíneos (risco de nova hemorragia, aneurismas, infarto e complicações em olhos, cérebro e outros órgãos). Essa doença não tem cura, mas com acompanhamento especializado muitas complicações podem ser prevenidas.</p>
+
+      <p>Estamos pedindo ajuda financeira para cobrir custos que não conseguimos pelo SUS, Unimed ou via judicial. Meu marido trabalha para manter os custos diários, mas as necessidades são muito altas. Já pedimos ajuda a vereadores e deputados sem resultado até o momento.</p>
+
+      <p>Entendemos que qualquer ajuda conta: doação financeira, ideias para captação (rifas, bazares, prêmios, parcerias), ou compartilhamento para alcançar mais pessoas. A nossa meta total é R$100.000 — esse valor cobre os itens listados abaixo e despesas relacionadas (transporte, estadia, exames e acompanhamento).</p>
+    </section>
+
+    <section id="needs" class="card">
+      <h2>O que a Mirella precisa (lista resumida)</h2>
+      <ul class="needs-list">
+        <li>Órtese + tala extensora — já solicitadas ao SUS, mas não entregues (estimativa: ≈ R$2.000+)</li>
+        <li>Carrinho postural (específico para criança maior) — não disponível pelo SUS (aprox. R$23.000)</li>
+        <li>Andador/mandador adaptado (com apoio de cabeça, tronco e braços) — indicado por avaliação (aprox. R$40.000)</li>
+        <li>Vestimenta terapêutica para sustentação corporal (aprox. R$4.000+)</li>
+        <li>Exame visual especializado (disponível apenas em São Paulo) — necessário para orientações de estimulação (≈ R$1.000+)</li>
+        <li>Consulta com ortopedista especializado em paralisia cerebral (consulta aprox. R$1.600)</li>
+        <li>Consulta com neuro-oftalmologista para acompanhamento contínuo (aprox. R$700)</li>
+        <li>Monitorização/eletron 24 horas em Porto Alegre (estadia e custos relacionados — estadia aprox. R$970)</li>
+        <li>Outros exames e procedimentos já solicitados (estimativa judicial/particular citada: ≈ R$20.000)</li>
+      </ul>
+
+      <p class="small">Observação: valores são estimativas conforme descrito no vídeo e podem ser atualizados com orçamentos oficiais. A meta definida: <strong>R$100.000</strong>.</p>
+    </section>
+
+    <section id="goal" class="card">
+      <h2>Meta de arrecadação</h2>
+      <div class="meta">
+        <div class="amounts">
+          <div>Meta: <strong id="goalAmount">R$ 100.000,00</strong></div>
+          <div>Arrecadado: <strong id="raisedAmount">R$ 0,00</strong></div>
+        </div>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar"><div id="progressFill" style="width:0%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="donate" class="card">
+      <h2>Como doar</h2>
+      <p>Escolha um método abaixo. Substitua os links e chaves pelos seus dados reais quando estiver pronto.</p>
+
+      <div class="donation-buttons">
+        <a id="paypalBtn" class="btn btn-primary" href="#" target="_blank" rel="noopener">Doar via PayPal</a>
+        <a id="picpayBtn" class="btn btn-secondary" href="#" target="_blank" rel="noopener">Doar via PicPay</a>
+        <a id="vakinhaBtn" class="btn btn-secondary" href="#" target="_blank" rel="noopener">Doar via Vakinha</a>
+        <a id="pagseguroBtn" class="btn btn-secondary" href="#" target="_blank" rel="noopener">Doar via PagSeguro</a>
+      </div>
+
+      <div class="pix">
+        <h3>PIX</h3>
+        <p>Chave PIX (CPF/telefone): <strong id="pixKey">53984860921</strong></p>
+        <p>Para gerar o QR de pagamento automático (código que já abre o pagamento no banco), posso gerar e inserir aqui — me informe o NOME DO TITULAR exatamente como está no banco (ex.: LARISSA SILVA) e se quer um Txid específico (ex.: doacao-mirella) ou prefira QR estático.</p>
+        <p>Enquanto isso, os doadores podem copiar a chave acima e colar no app do banco para pagar via PIX.</p>
+        <img id="pixQr" src="https://via.placeholder.com/220?text=QR+PIX+placeholder" alt="QR PIX placeholder"/>
+      </div>
+
+      <p class="small">Importante: registre cada doação, emita recibos e mantenha prestação de contas para transparência com os doadores.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contato</h2>
+      <p>Nome: Larissa (mãe da Mirella)</p>
+      <p>Email: <a id="contactEmail" href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+      <p>WhatsApp: <span id="contactPhone">[coloque número aqui]</span></p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>Campanha em benefício da Mirella — divulgada por familiares. Obrigado por compartilhar e ajudar.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
