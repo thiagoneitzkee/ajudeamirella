@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ajude a [NOME DA CRIANÇA] — Arrecadação</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>Ajude a [NOME DA CRIANÇA]</h1>
+      <p class="subtitle">Arrecadação para apoio a tratamento/ajustes necessários</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="video" class="card">
+      <h2>Sobre a história</h2>
+      <!-- Insira o embed do Instagram ou um vídeo/local -->
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DayBwnzxDpl/" data-instgrm-version="14" style="background:#FFF; border:0; margin:0 auto; max-width:540px; width:100%;"></blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+
+      <p id="story">[Cole aqui a história resumida da criança: nome, diagnóstico, necessidades, objetivo da arrecadação — ex: cadeira de rodas adaptada, cirurgia, transporte, fisioterapia, etc.]</p>
+    </section>
+
+    <section id="goal" class="card">
+      <h2>Meta de arrecadação</h2>
+      <div class="meta">
+        <div class="amounts">
+          <div>Meta: <strong id="goalAmount">R$ 0,00</strong></div>
+          <div>Arrecadado: <strong id="raisedAmount">R$ 0,00</strong></div>
+        </div>
+        <div class="progress">
+          <div id="progressBar" class="progress-bar"><div id="progressFill" style="width:0%"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="donate" class="card">
+      <h2>Como doar</h2>
+      <p>Escolha um método abaixo. Substitua os links e chaves pelos seus dados reais.</p>
+
+      <div class="donation-buttons">
+        <a id="paypalBtn" class="btn btn-primary" href="https://www.paypal.com/paypalme/SEUNOME" target="_blank" rel="noopener">Doar via PayPal</a>
+        <a id="pagseguroBtn" class="btn btn-secondary" href="https://pag.ae/SEULINK" target="_blank" rel="noopener">Doar via PagSeguro</a>
+        <a id="picpayBtn" class="btn btn-secondary" href="https://picpay.me/SEUNOME" target="_blank" rel="noopener">Doar via PicPay</a>
+      </div>
+
+      <div class="pix">
+        <h3>PIX</h3>
+        <p>Chave PIX: <strong id="pixKey">seu-pix@exemplo.com</strong></p>
+        <p>Se preferir, mostre o QR code a partir da sua chave Pix (substitua abaixo).</p>
+        <img id="pixQr" src="https://via.placeholder.com/220?text=QR+PIX" alt="QR PIX" />
+      </div>
+
+      <p class="small">Importante: registre cada doação e emita recibos/relatórios para transparência.</p>
+    </section>
+
+    <section id="transparency" class="card">
+      <h2>Transparência</h2>
+      <ul>
+        <li>Responsável pela conta: [Nome do responsável]</li>
+        <li>Banco / Agência / Conta: [inserir se for transferência]</li>
+        <li>Como utilizaremos: [ex.: fisioterapia, adaptação de casa, transporte]</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contato</h2>
+      <p>Email: <a href="mailto:contato@exemplo.com">contato@exemplo.com</a></p>
+      <p>Telefone/WhatsApp: [número]</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <small>Site criado para arrecadação em benefício de [NOME DA CRIANÇA]. Transparência e consentimento são fundamentais.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
