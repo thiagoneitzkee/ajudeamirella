@@ -1,0 +1,33 @@
+:root{
+  --primary:#0077cc;
+  --accent:#2d9cdb;
+  --bg:#f6f8fa;
+  --card:#ffffff;
+  --text:#222;
+}
+
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;color:var(--text);margin:0;background:var(--bg);line-height:1.5}
+.container{max-width:900px;margin:0 auto;padding:1rem}
+.hero{background:linear-gradient(90deg,var(--primary),var(--accent));color:white;padding:2rem 0;text-align:center}
+.card{background:var(--card);padding:1rem;margin:1rem 0;border-radius:8px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.subtitle{opacity:.95;margin-top:.25rem}
+.gallery{display:flex;flex-wrap:wrap;gap:.5rem}
+.gallery img{width:48%;border-radius:8px;object-fit:cover}
+.story p{margin:0.6rem 0}
+.needs-list{list-style:disc;padding-left:1.25rem}
+.meta{display:flex;flex-direction:column;gap:.5rem}
+.progress{width:100%}
+.progress-bar{background:#eee;border-radius:999px;height:16px;overflow:hidden}
+.progress-bar > div{background:linear-gradient(90deg,var(--accent),var(--primary));height:100%;width:0}
+.donation-buttons{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:0.75rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;text-decoration:none;color:white}
+.btn-primary{background:var(--primary)}
+.btn-secondary{background:#6c757d}
+.pix img{margin-top:.5rem;border-radius:8px}
+.footer{padding:1rem 0;text-align:center;color:#555}
+.small{font-size:.9rem;color:#444}
+@media(min-width:700px){
+  .gallery img{width:23%}
+  .meta{flex-direction:row;justify-content:space-between;align-items:center}
+}
