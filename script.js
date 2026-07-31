@@ -6,13 +6,25 @@ let RAISED = 0.00;    // R$ arrecadado atual (inicie em 0 ou atualize conforme n
 const PIX_KEY = "53984860921";
 const PIX_QR_PLACEHOLDER = "https://via.placeholder.com/220?text=QR+PIX+placeholder";
 
+// Contato
+const CONTACT_EMAIL = "larissaneitzke2016@gmail.com";
+const CONTACT_WHATSAPP = "53984860921";
+
 function formatBRL(v){ return v.toLocaleString('pt-BR', {style:'currency', currency:'BRL'}); }
 
 function updateUI(){
   document.getElementById('goalAmount').textContent = formatBRL(GOAL);
   document.getElementById('raisedAmount').textContent = formatBRL(RAISED);
-  document.getElementById('pixKey').textContent = PIX_KEY;
-  document.getElementById('pixQr').src = PIX_QR_PLACEHOLDER;
+  const pixKeyEl = document.getElementById('pixKey');
+  if (pixKeyEl) pixKeyEl.textContent = PIX_KEY;
+  const pixQrEl = document.getElementById('pixQr');
+  if (pixQrEl) pixQrEl.src = PIX_QR_PLACEHOLDER;
+
+  const contactEmailEl = document.getElementById('contactEmail');
+  if (contactEmailEl) contactEmailEl.href = 'mailto:' + CONTACT_EMAIL;
+
+  const contactPhoneEl = document.getElementById('contactPhone');
+  if (contactPhoneEl) contactPhoneEl.href = 'https://wa.me/' + CONTACT_WHATSAPP;
 
   const percent = Math.min(100, GOAL > 0 ? Math.round((RAISED/GOAL) * 100) : 0);
   document.getElementById('progressFill').style.width = percent + '%';
