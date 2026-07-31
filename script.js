@@ -1,7 +1,7 @@
 // Substitua estes valores via edição direta ou por integração automatizada posteriormente.
-const GOAL = 8000.00; // R$ meta
-const RAISED = 1234.50; // R$ arrecadado atual
-const PIX_KEY = "seu-pix@exemplo.com";
+const GOAL = 103.147,00; // R$ meta
+const RAISED = 12.430; // R$ arrecadado atual
+const PIX_KEY = "53 98486-0921";
 const PIX_QR = "https://via.placeholder.com/220?text=QR+PIX"; // troque pela sua imagem de QR
 
 function formatBRL(v){ return v.toLocaleString('pt-BR', {style:'currency', currency:'BRL'}); }
