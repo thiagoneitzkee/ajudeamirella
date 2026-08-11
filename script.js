@@ -1,5 +1,5 @@
 // Site interativo — estiloso
-let GOAL = 100000.00;
+let GOAL = 103147.00;
 let RAISED = 0.00;
 
 // Dados (já preenchidos)
