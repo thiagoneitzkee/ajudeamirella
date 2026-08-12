@@ -7,73 +7,123 @@
   <meta name="description" content="Ajude a Mirella: arrecadação para tratamentos, exames e equipamentos. Transparência e contato direto com a família." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<body><!-- HERO (substituir a seção header existente) -->
-<header class="hero" role="banner" aria-label="Cabeçalho: Ajude a Mirella">
-  <div class="container hero-grid">
-    <div class="hero-card" role="region" aria-label="Informações principais">
-      <div class="hero-copy">
-        <h1>Ajude a Mirella</h1>
-        <p class="lead">Arrecadação para tratamentos, exames e equipamentos essenciais. Sua ajuda transforma o dia a dia da Mirella.</p>
+<body>
+  <header class="hero" role="banner" aria-label="Cabeçalho: Ajude a Mirella">
+    <div class="container hero-grid">
+      <div class="hero-card" role="region" aria-label="Informações principais">
+        <div class="hero-copy">
+          <h1>Ajude a Mirella</h1>
+          <p class="lead">Arrecadação para tratamentos, exames e equipamentos essenciais. Sua ajuda transforma o dia a dia da Mirella.</p>
 
-        <div class="hero-cta">
-          <a href="#donation" class="btn btn-primary">Doar agora</a>
-          <a href="#transparency" class="btn btn-outline">Transparência</a>
+          <div class="hero-cta">
+            <a href="#donation" class="btn btn-primary">Doar agora</a>
+            <a href="#transparency" class="btn btn-outline">Transparência</a>
+          </div>
+
+          <div class="trust-row small" aria-hidden="false">
+            <!-- Selo simples inline -->
+            <div class="badge" role="status" aria-label="Autorizado pela família">
+              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M12 2a9 9 0 1 0 .001 18.001A9 9 0 0 0 12 2zm-1.1 13.2-3.6-3.6 1.4-1.4 2.2 2.2 4.8-4.8 1.4 1.4-6.2 6.2z"/>
+              </svg>
+              Autorizado pela família
+            </div>
+            <div class="small muted">Meta: <strong id="goalAmount">R$ 103.147,00</strong></div>
+          </div>
         </div>
 
-        <div class="trust-row small" aria-hidden="false">
-          <div class="badge" role="status">Autorizado pela família</div>
-          <div class="small muted">Meta: <strong>R$ 100.000,00</strong></div>
+        <div class="hero-photo" aria-hidden="true">
+          <div class="photo-frame">
+            <img src="mirella-4.jpg" alt="Foto da Mirella" loading="lazy" />
+          </div>
+          <div class="badge">2 anos • Paralisia cerebral</div>
         </div>
-      </div>
-
-      <div class="hero-photo" aria-hidden="true">
-        <div class="photo-frame">
-          <img src="mirella-4.jpg" alt="Foto da Mirella" loading="lazy" />
-        </div>
-        <div class="badge">2 anos • Paralisia cerebral</div>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- DONATION (pequena alteração: progress com aria e botão de QR) -->
-<section class="card donate" id="donation">
-  <h2>Como doar</h2>
-  <div class="donation-panel">
-    <div class="donation-left">
-      <h3>PIX</h3>
-      <div class="pix-block">
-        <div class="pix-key" id="pixKey">53984860921</div>
-        <div class="pix-actions">
-          <button id="copyPix" class="btn btn-primary">Copiar chave</button>
-          <button id="copyPixWithMsg" class="btn btn-outline">Copiar com TXID</button>
-          <button id="showQR" class="btn btn-ghost" aria-expanded="false">Mostrar QR</button>
-        </div>
-        <div class="note muted">Ao enviar pelo app, inclua o Txid <strong>DOACAO-MIRELLA-2026</strong> se quiser identificar sua doação.</div>
       </div>
     </div>
+  </header>
 
-    <div class="donation-right">
-      <div class="progress-wrap" aria-live="polite">
-        <div class="progress-labels">
-          <div>Arrecadado</div>
-          <div class="progress-numbers"><div id="raisedAmount" class="progress-amount">R$ 0,00</div></div>
-        </div>
-        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da arrecadação">
-          <div id="progressFill" class="progress-fill" style="width:0%"></div>
-        </div>
-        <div class="progress-goal small muted" style="margin-top:.6rem">Meta: <strong id="goalAmount">R$ 100.000,00</strong></div>
-      </div>
+  <main class="container" role="main">
+    <section class="card" id="about">
+      <h2>Sobre a Mirella</h2>
+      <p>Oi, meu nome é Larissa e essa é a Mirella. Mirella tem dois anos e possui paralisia cerebral e uma doença genética rara. Ela teve uma hemorragia no cérebro ainda na gestação (22 semanas).</p>
+      <p>Precisamos de acompanhamento especializado, equipamentos e exames que não conseguimos pelo SUS/Unimed. Cada compartilhamento e cada doação nos aproxima da meta e da qualidade de vida que desejamos para a Mirella.</p>
+    </section>
 
-      <div style="margin-top:.8rem;display:flex;gap:.6rem">
-        <button id="donateTest" class="btn btn-primary">Simular doação (R$50)</button>
-        <button id="shareBtn" class="btn btn-outline">Compartilhar</button>
+    <section class="card" id="gallery">
+      <h2>Fotos</h2>
+      <div class="gallery-grid" aria-label="Galeria de fotos">
+        <button class="thumb" data-src="mirella-1.jpg" aria-label="Abrir foto 1"><img src="mirella-1.jpg" alt="Mirella foto 1" loading="lazy" /></button>
+        <button class="thumb" data-src="mirella-2.jpg" aria-label="Abrir foto 2"><img src="mirella-2.jpg" alt="Mirella foto 2" loading="lazy" /></button>
+        <button class="thumb" data-src="mirella-3.jpg" aria-label="Abrir foto 3"><img src="mirella-3.jpg" alt="Mirella foto 3" loading="lazy" /></button>
+        <button class="thumb" data-src="mirella-4.jpg" aria-label="Abrir foto 4"><img src="mirella-4.jpg" alt="Mirella foto 4" loading="lazy" /></button>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+
+    <section class="card" id="needs">
+      <h2>O que a Mirella precisa</h2>
+      <div class="needs-grid">
+        <div class="need">
+          <h3>Equipamentos</h3>
+          <p>Órtese, tala extensora, carrinho postural e andador adaptado.</p>
+        </div>
+        <div class="need">
+          <h3>Consultas & Exames</h3>
+          <p>Ortopedista especializado, neuro-oftalmo, monitorização e exames em SP/Porto Alegre.</p>
+        </div>
+        <div class="need">
+          <h3>Terapias</h3>
+          <p>Fisioterapia, terapia ocupacional e estímulo visual contínuo.</p>
+        </div>
+      </div>
+      <p class="muted">Valores aproximados — meta total R$103.147,00.</p>
+    </section>
+
+    <section class="card donate" id="donation">
+      <h2>Como doar</h2>
+      <div class="donation-panel">
+        <div class="donation-left">
+          <h3>PIX</h3>
+          <div class="pix-block">
+            <div class="pix-key" id="pixKey">53984860921</div>
+            <div class="pix-actions">
+              <button id="copyPix" class="btn btn-primary">Copiar chave</button>
+              <button id="copyPixWithMsg" class="btn btn-outline">Copiar com TXID</button>
+              <button id="showQR" class="btn btn-ghost" aria-expanded="false">Mostrar QR</button>
+            </div>
+            <div class="note muted">Ao enviar pelo app, inclua o Txid <strong>DOACAO-MIRELLA-2026</strong> se quiser identificar sua doação.</div>
+          </div>
+
+          <div class="other-payments" style="margin-top:.8rem">
+            <h4>Outros</h4>
+            <div class="pay-buttons">
+              <a id="paypalLink" class="btn btn-pay" href="#" target="_blank" rel="noopener">PayPal</a>
+              <a id="picpayLink" class="btn btn-pay" href="#" target="_blank" rel="noopener">PicPay</a>
+              <a id="vakinhaLink" class="btn btn-pay" href="#" target="_blank" rel="noopener">Vakinha</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="donation-right">
+          <div class="progress-wrap" aria-live="polite">
+            <div class="progress-labels">
+              <div>Arrecadado</div>
+              <div class="progress-numbers"><div id="raisedAmount" class="progress-amount">R$ 0,00</div></div>
+            </div>
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da arrecadação">
+              <div id="progressFill" class="progress-fill" style="width:0%"></div>
+            </div>
+            <div class="progress-goal small muted" style="margin-top:.6rem">Meta: <strong id="goalAmountFooter">R$ 103.147,00</strong></div>
+          </div>
+
+          <div class="quick-actions" style="margin-top:.8rem">
+            <button id="donateTest" class="btn btn-primary">Simular doação (R$50)</button>
+            <button id="shareBtn" class="btn btn-outline">Compartilhar</button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="card" id="transparency">
       <h2>Transparência & Contato</h2>
@@ -87,7 +137,7 @@
   <footer class="site-footer" role="contentinfo">
     <div class="container footer-inner">
       <small>Campanha em benefício da Mirella — autorizada pela família. Obrigado por ajudar e compartilhar.</small>
-      <nav class="socials">
+      <nav class="socials" aria-label="Links sociais">
         <a href="#" aria-label="Compartilhar no Facebook">FB</a>
         <a href="#" aria-label="Compartilhar no WhatsApp">WA</a>
       </nav>
@@ -102,6 +152,6 @@
     <button class="lb-next" aria-label="Próximo">›</button>
   </div>
 
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
