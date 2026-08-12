@@ -6,137 +6,177 @@
   <title>Ajude a Mirella — Arrecadação</title>
   <meta name="description" content="Ajude a Mirella: arrecadação para tratamentos, exames e equipamentos. Transparência e contato direto com a família." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <header class="hero" role="banner" aria-label="Cabeçalho: Ajude a Mirella">
-    <div class="container hero-grid">
-      <div class="hero-card" role="region" aria-label="Informações principais">
-        <div class="hero-copy">
-          <h1>Ajude a Mirella</h1>
-          <p class="lead">Arrecadação para tratamentos, exames e equipamentos essenciais. Sua ajuda transforma o dia a dia da Mirella.</p>
-
-          <div class="hero-cta">
-            <a href="#donation" class="btn btn-primary">Doar agora</a>
-            <a href="#transparency" class="btn btn-outline">Transparência</a>
-          </div>
-
-          <div class="trust-row small" aria-hidden="false">
-            <div class="badge" role="status" aria-label="Autorizado pela família">
-              <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-                <path fill="currentColor" d="M12 2a9 9 0 1 0 .001 18.001A9 9 0 0 0 12 2zm-1.1 13.2-3.6-3.6 1.4-1.4 2.2 2.2 4.8-4.8 1.4 1.4-6.2 6.2z"/>
-              </svg>
-              Autorizado pela família
-            </div>
-            <div class="small muted">Meta: <strong id="goalAmount">R$ 103.147,00</strong></div>
-          </div>
-        </div>
-
-        <div class="hero-photo" aria-hidden="true">
-          <div class="photo-frame">
-            <img src="mirella-4.jpg" alt="Foto da Mirella" loading="lazy" />
-          </div>
-          <div class="badge">2 anos • Paralisia cerebral</div>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <a href="/" class="logo">Ajude a Mirella</a>
+        <span class="tag">Campanha familiar</span>
       </div>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="#about">Sobre</a>
+        <a href="#gallery">Fotos</a>
+        <a href="#donation" class="btn btn-sm btn-primary">Doar</a>
+      </nav>
     </div>
   </header>
 
-  <main class="container" role="main">
-    <section class="card" id="about">
-      <h2>Sobre a Mirella</h2>
-      <p>Oi, meu nome é Larissa e essa é a Mirella. Mirella tem dois anos e possui paralisia cerebral e uma doença genética rara. Ela teve uma hemorragia no cérebro ainda na gestação (22 semanas).</p>
-      <p>Precisamos de acompanhamento especializado, equipamentos e exames que não conseguimos pelo SUS/Unimed. Cada compartilhamento e cada doação nos aproxima da meta e da qualidade de vida que desejamos para a Mirella.</p>
-    </section>
+  <main>
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <h1>Ajude a Mirella</h1>
+          <p class="lead">Arrecadação para tratamentos, exames e equipamentos que vão transformar a rotina e o desenvolvimento da Mirella.</p>
 
-    <section class="card" id="gallery">
-      <h2>Fotos</h2>
-      <div class="gallery-grid" aria-label="Galeria de fotos">
-        <button class="thumb" data-src="mirella-1.jpg" aria-label="Abrir foto 1"><img src="mirella-1.jpg" alt="Mirella foto 1" loading="lazy" /></button>
-        <button class="thumb" data-src="mirella-2.jpg" aria-label="Abrir foto 2"><img src="mirella-2.jpg" alt="Mirella foto 2" loading="lazy" /></button>
-        <button class="thumb" data-src="mirella-3.jpg" aria-label="Abrir foto 3"><img src="mirella-3.jpg" alt="Mirella foto 3" loading="lazy" /></button>
-        <button class="thumb" data-src="mirella-4.jpg" aria-label="Abrir foto 4"><img src="mirella-4.jpg" alt="Mirella foto 4" loading="lazy" /></button>
-      </div>
-    </section>
-
-    <section class="card" id="needs">
-      <h2>O que a Mirella precisa</h2>
-      <div class="needs-grid">
-        <div class="need">
-          <h3>Equipamentos</h3>
-          <p>Órtese, tala extensora, carrinho postural e andador adaptado.</p>
-        </div>
-        <div class="need">
-          <h3>Consultas & Exames</h3>
-          <p>Ortopedista especializado, neuro-oftalmo, monitorização e exames em SP/Porto Alegre.</p>
-        </div>
-        <div class="need">
-          <h3>Terapias</h3>
-          <p>Fisioterapia, terapia ocupacional e estímulo visual contínuo.</p>
-        </div>
-      </div>
-      <p class="muted">Valores aproximados — meta total R$103.147,00.</p>
-    </section>
-
-    <section class="card donate" id="donation">
-      <h2>Como doar</h2>
-      <div class="donation-panel">
-        <div class="donation-left">
-          <h3>PIX</h3>
-          <div class="pix-block">
-            <div class="pix-key" id="pixKey">53984860921</div>
-            <div class="pix-actions">
-              <button id="copyPix" class="btn btn-primary">Copiar chave</button>
-              <button id="copyPixWithMsg" class="btn btn-outline">Copiar com TXID</button>
-              <button id="showQR" class="btn btn-ghost" aria-expanded="false">Mostrar QR</button>
-            </div>
-            <div class="note muted">Ao enviar pelo app, inclua o Txid <strong>DOACAO-MIRELLA-2026</strong> se quiser identificar sua doação.</div>
+          <div class="hero-ctas">
+            <a href="#donation" class="btn btn-primary large">Doar agora</a>
+            <a href="#transparency" class="btn btn-outline large">Transparência</a>
           </div>
 
-          <div class="other-payments" style="margin-top:.8rem">
-            <h4>Outros</h4>
-            <div class="pay-buttons">
-              <a id="paypalLink" class="btn btn-pay" href="#" target="_blank" rel="noopener">PayPal</a>
-              <a id="picpayLink" class="btn btn-pay" href="#" target="_blank" rel="noopener">PicPay</a>
-              <a id="vakinhaLink" class="btn btn-pay" href="#" target="_blank" rel="noopener">Vakinha</a>
-            </div>
+          <div class="trust">
+            <div class="badge">Autorizado pela família</div>
+            <div class="meta">Meta: <strong id="goalAmount">R$ 103.147,00</strong></div>
           </div>
+
+          <ul class="quick-needs">
+            <li>Órtese & tala</li>
+            <li>Carrinho postural</li>
+            <li>Andador adaptado</li>
+            <li>Exames especializados</li>
+          </ul>
         </div>
 
-        <div class="donation-right">
-          <div class="progress-wrap" aria-live="polite">
-            <div class="progress-labels"><div>Arrecadado</div><div class="progress-numbers"><div id="raisedAmount" class="progress-amount">R$ 0,00</div></div></div>
-            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da arrecadação">
+        <div class="hero-aside">
+          <div class="photo-frame">
+            <img src="mirella-4.jpg" alt="Foto da Mirella" loading="lazy" />
+          </div>
+
+          <div class="donation-card">
+            <div class="donation-header">
+              <div>
+                <small class="muted">Arrecadado</small>
+                <div id="raisedAmount" class="raised">R$ 0,00</div>
+              </div>
+              <div class="goal small muted">Meta <div id="goalAmountCard"><strong>R$ 103.147,00</strong></div></div>
+            </div>
+
+            <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
               <div id="progressFill" class="progress-fill" style="width:0%"></div>
             </div>
-            <div class="progress-goal small muted" style="margin-top:.6rem">Meta: <strong id="goalAmountFooter">R$ 103.147,00</strong></div>
-          </div>
 
-          <div class="quick-actions" style="margin-top:.8rem">
-            <button id="donateTest" class="btn btn-primary">Simular doação (R$50)</button>
-            <button id="shareBtn" class="btn btn-outline">Compartilhar</button>
+            <div class="donation-actions">
+              <button id="copyPix" class="btn btn-primary">Copiar PIX</button>
+              <button id="copyPixWithMsg" class="btn btn-outline">Copiar com TXID</button>
+            </div>
+
+            <div class="small muted" style="margin-top:.6rem">Inclua o Txid <strong>DOACAO-MIRELLA-2026</strong> no comprovante para identificação.</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="card" id="transparency">
-      <h2>Transparência & Contato</h2>
-      <p>Responsável: <strong>Larissa Neitzke Nörnberg</strong></p>
-      <p>Email: <a href="mailto:larissaneitzke2016@gmail.com">larissaneitzke2016@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/53984860921" target="_blank" rel="noopener">+53 98486-0921</a></p>
-      <p class="muted">Registre sua doação e envie comprovante pelo WhatsApp para que possamos atualizar a prestação de contas.</p>
+    <section class="container" id="about">
+      <div class="card">
+        <h2>Sobre a Mirella</h2>
+        <p>Oi, meu nome é Larissa e essa é a Mirella. Mirella tem dois anos e possui paralisia cerebral e uma doença genética rara. Ela teve uma hemorragia no cérebro ainda na gestação.</p>
+        <p>Precisamos de acompanhamento especializado, equipamentos e exames que não conseguimos pelo SUS/Unimed. Cada compartilhamento e cada doação nos aproxima da meta e da qualidade de vida que desejamos para a Mirella.</p>
+      </div>
+    </section>
+
+    <section class="container" id="gallery">
+      <h2>Fotos</h2>
+      <div class="gallery-grid">
+        <button class="thumb" data-src="mirella-1.jpg" aria-label="Abrir foto 1"><img src="mirella-1.jpg" alt="Mirella foto 1" loading="lazy"/></button>
+        <button class="thumb" data-src="mirella-2.jpg" aria-label="Abrir foto 2"><img src="mirella-2.jpg" alt="Mirella foto 2" loading="lazy"/></button>
+        <button class="thumb" data-src="mirella-3.jpg" aria-label="Abrir foto 3"><img src="mirella-3.jpg" alt="Mirella foto 3" loading="lazy"/></button>
+        <button class="thumb" data-src="mirella-4.jpg" aria-label="Abrir foto 4"><img src="mirella-4.jpg" alt="Mirella foto 4" loading="lazy"/></button>
+      </div>
+    </section>
+
+    <section class="container" id="needs">
+      <div class="card">
+        <h2>O que a Mirella precisa</h2>
+        <div class="needs-grid">
+          <div class="need">
+            <h3>Equipamentos</h3>
+            <p>Órtese, tala extensora, carrinho postural e andador adaptado.</p>
+          </div>
+          <div class="need">
+            <h3>Consultas & Exames</h3>
+            <p>Ortopedista especializado, neuro-oftalmo, monitorização e exames em SP/Porto Alegre.</p>
+          </div>
+          <div class="need">
+            <h3>Terapias</h3>
+            <p>Fisioterapia, terapia ocupacional e estímulo visual contínuo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="donation">
+      <div class="card donate-card">
+        <h2>Como doar</h2>
+        <div class="donation-panel">
+          <div>
+            <h3>PIX</h3>
+            <div class="pix-block">
+              <div class="pix-key" id="pixKey">53984860921</div>
+              <div class="pix-actions">
+                <button id="copyPix2" class="btn btn-primary">Copiar chave</button>
+                <button id="copyPixWithMsg2" class="btn btn-outline">Copiar com TXID</button>
+                <button id="showQR" class="btn btn-ghost">Mostrar QR</button>
+              </div>
+            </div>
+
+            <h4 style="margin-top:.8rem">Outros meios</h4>
+            <div class="pay-buttons">
+              <a id="paypalLink" class="btn btn-pay" href="#">PayPal</a>
+              <a id="picpayLink" class="btn btn-pay" href="#">PicPay</a>
+              <a id="vakinhaLink" class="btn btn-pay" href="#">Vakinha</a>
+            </div>
+          </div>
+
+          <aside>
+            <div class="progress-summary small muted">Meta total: <strong id="goalAmountText">R$ 103.147,00</strong></div>
+            <div style="margin-top:.6rem">
+              <button id="donateTest" class="btn btn-primary">Simular doação (R$50)</button>
+              <button id="shareBtn" class="btn btn-outline">Compartilhar</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="transparency">
+      <div class="card">
+        <h2>Transparência & Contato</h2>
+        <p>Responsável: <strong>Larissa Neitzke Nörnberg</strong></p>
+        <p>Email: <a href="mailto:larissaneitzke2016@gmail.com">larissaneitzke2016@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/53984860921" target="_blank" rel="noopener">+53 98486-0921</a></p>
+        <p class="muted">Registre sua doação e envie comprovante pelo WhatsApp para que possamos atualizar a prestação de contas.</p>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container footer-inner">
-      <small>Campanha em benefício da Mirella — autorizada pela família. Obrigado por ajudar e compartilhar.</small>
-      <nav class="socials" aria-label="Links sociais">
-        <a href="#" aria-label="Compartilhar no Facebook">FB</a>
-        <a href="#" aria-label="Compartilhar no WhatsApp">WA</a>
-      </nav>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="col">
+        <strong>Ajude a Mirella</strong>
+        <p class="muted">Campanha autorizada pela família. Obrigado por apoiar e compartilhar.</p>
+      </div>
+      <div class="col">
+        <strong>Contato</strong>
+        <p><a href="mailto:larissaneitzke2016@gmail.com">larissaneitzke2016@gmail.com</a></p>
+        <p><a href="https://wa.me/53984860921">+53 98486-0921</a></p>
+      </div>
+      <div class="col">
+        <strong>Links</strong>
+        <p><a href="#donation">Como doar</a></p>
+        <p><a href="#transparency">Prestação de contas</a></p>
+      </div>
     </div>
   </footer>
 
